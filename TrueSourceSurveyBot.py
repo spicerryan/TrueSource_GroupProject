@@ -14,24 +14,24 @@ import os
 import openai
 
 response = openai.ChatCompletion.create(
-    api_key = "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",
+    api_key = "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",
     model = "gpt-3.5-turbo",
     messages = [
         {
             "role":"system",
-            "content":"You are participating in a feedback and engagement survey."
+            "content":"You have a Master in data Analyst using python to analyze feedback and engagement surveys."
             
             
         },
         {"role":"user",
-         "content":"***"
+         "content":" *** "
          
          }
         
         
         ],
     temperature = 0,
-    max_tokens = 256,
+    max_tokens = 2000,
     top_p = 1,
     frequency_penalty = 0,
     presence_penalty = 0
@@ -62,17 +62,17 @@ def take_survey():
     # Generate questions and collect responses
     # Question 1:
     user_responses = []
-    question = "How satisfied are you with your job? (1 - Very Dissatisfied, 5 - Very Satisfied): "
+    question = "How satisfied are you with your job? (1 - Very Dissatisfied, 2 - Very Satisfied): "
     user_answer = input(question)
     user_responses.append({"question": question, "answer": user_answer})
 
     # Question 2:
     user_responses = []
-    question = "Question 2? (1 - ***, 5 - ***): "
+    question = "How important is work life balance to you? (1 - Very Important, 2 - Moderately Important, 3 - Least Important): "
     user_answer = input(question)
     user_responses.append({"question": question, "answer": user_answer})
 
-    # Question 3:
+     # Question 3:
     user_responses = []
     question = "Question 3? (1 - ***, 5 - ***): "
     user_answer = input(question)
